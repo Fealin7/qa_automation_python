@@ -109,13 +109,7 @@ copy_list = []
 for i in my_random_list:
     copy_list.append(i)
 
-print(f"Copied list, option 1: {copy_list}")
-
-copy_list_alt = my_random_list
-copy_list_alt1 = list(my_random_list)
-
-print(f"Copied list, option 2: {copy_list_alt}")
-print(f"Copied list, option 3: {copy_list_alt1}")
+print(f"Copied list: {copy_list}")
 
 """
 Task 8
