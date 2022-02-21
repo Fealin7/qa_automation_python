@@ -23,11 +23,7 @@ Task 2
 """
 LIST_SIZE = int(input("Enter the number of the list size: "))
 RANDOM_UPPER_BOUND = int(input("Enter the number of the upper bound: "))
-my_list = []
-
-for _ in range(0, LIST_SIZE):
-    my_list.append(random.randint(0, RANDOM_UPPER_BOUND))
-
+my_list = [random.randint(0, RANDOM_UPPER_BOUND) for _ in range(LIST_SIZE)]
 print(f"List: {my_list}")
 
 
