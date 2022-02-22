@@ -5,13 +5,12 @@ import random
 Используя дебагер, найдите и исправьте ошибку.
 Опишите в комментарии к коду, в чем была ошибка. Добавьте минимум 5 тестов для этого кода
 """
-
 # def bubble_sort(l):
 #     t = l.copy()
 #     for n in range(0, len(t)):
-#         for i in range(len(t) - n):
-#             if t[i] > t[n]:
-#                 t[i], t[n] = t[n], t[i]
+#         for i in range(len(t) - n): # внутренний цикл должен выполняться меньше, чем внешний, на 1 раз
+#             if t[i] > t[n]: # тут надо сравнить текущий элемент со следующим
+#                 t[i], t[n] = t[n], t[i] # тут надо, при выполнении условия выше, поменять эти элементы местами
 #     return t
 #
 #
@@ -23,13 +22,11 @@ import random
 def bubble_sort(l):
     t = l.copy()
     for n in range(0, len(t)):
-        for i in range(len(t) - n - 1):
+        for i in range(len(t) - 1):
             if t[i] > t[i + 1]:
                 t[i], t[i + 1] = t[i + 1], t[i]
     return t
 
-
-# nums = [4, 1, 6, 3, 2, 7, 8, 0, 5]
 
 # 5 tests
 LIST_SIZE = int(input("Enter the number of the list size: "))
