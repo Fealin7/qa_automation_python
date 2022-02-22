@@ -101,9 +101,11 @@ print(f"Extended total list: {new_total_orders_list}")
 *Используйте lambda
 """
 
-# sorted_orders_total = sorted(new_total_orders_list, lambda x: x[:-1])
-#
-# print(sorted_orders_total)
+# в отдельном файле это работает, а здесь нет
+
+# sorted_lst = sorted(new_total_orders_list, key=lambda x: x[-1])
+
+# print(sorted_lst)
 
 """
 Используя filter() оставьте только книги, количество которых больше 5ти. 
