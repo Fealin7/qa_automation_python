@@ -102,9 +102,19 @@ print(f"Extended total list: {new_total_orders_list}")
 """
 
 # в отдельном файле это работает, а здесь нет
-
+"""Запускала в отдельном файле
+my_lst = [(34587, 163.8), (98762, 284.0), (77226, 108.85000000000001), (88112, 84.97), (24387, 19.18), 
+          (18762, 945.5999999999999), (87236, 33.55), (58132, 386.01)]
+sorted_lst = sorted(my_lst, key=lambda x: x[::-1])
+print(sorted_lst)
+Output: [(24387, 19.18), (87236, 33.55), (88112, 84.97), (77226, 108.85000000000001), (34587, 163.8), (98762, 284.0), 
+         (58132, 386.01), (18762, 945.5999999999999)]
+"""
 # sorted_lst = sorted(new_total_orders_list, key=lambda x: x[-1])
+# print(sorted_lst)
 
+# так тоже не работает, та же TypeError: 'list' object is not callable
+# sorted_lst = sorted(total_orders_list, key=lambda x: x[3])
 # print(sorted_lst)
 
 """
