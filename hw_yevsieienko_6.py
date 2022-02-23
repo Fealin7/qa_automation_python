@@ -28,7 +28,6 @@ def bubble_sort(l):
     return t
 
 
-# 5 tests
 LIST_SIZE = int(input("Enter the number of the list size: "))
 RANDOM_UPPER_BOUND = int(input("Enter the number of the upper bound: "))
 my_list = [random.randint(0, RANDOM_UPPER_BOUND) for _ in range(LIST_SIZE)]
@@ -37,6 +36,7 @@ print(f"List: {my_list}")
 sorted = bubble_sort(my_list)
 print(f"Sorted list: {sorted}")
 
+# 5 tests
 
 """
 Представьте себе бухгалтерскую книгу в книжном магазине. В этой книге хранятся записи о номере заказа,
@@ -101,21 +101,9 @@ print(f"Extended total list: {new_total_orders_list}")
 *Используйте lambda
 """
 
-# в отдельном файле это работает, а здесь нет
-"""Запускала в отдельном файле
-my_lst = [(34587, 163.8), (98762, 284.0), (77226, 108.85000000000001), (88112, 84.97), (24387, 19.18), 
-          (18762, 945.5999999999999), (87236, 33.55), (58132, 386.01)]
-sorted_lst = sorted(my_lst, key=lambda x: x[::-1])
-print(sorted_lst)
-Output: [(24387, 19.18), (87236, 33.55), (88112, 84.97), (77226, 108.85000000000001), (34587, 163.8), (98762, 284.0), 
-         (58132, 386.01), (18762, 945.5999999999999)]
-"""
-# sorted_lst = sorted(new_total_orders_list, key=lambda x: x[-1])
-# print(sorted_lst)
+new_total_orders_list.sort(key=lambda x: x[-1])
 
-# так тоже не работает, та же TypeError: 'list' object is not callable
-# sorted_lst = sorted(total_orders_list, key=lambda x: x[3])
-# print(sorted_lst)
+print(f"Sorted total list: {new_total_orders_list}")
 
 """
 Используя filter() оставьте только книги, количество которых больше 5ти. 
